@@ -1,5 +1,7 @@
 # IKT-Projekt   
 #  
-# Kiss Bálint Simon --> étlap.csv, itallap.csv, file.py, rendelések(együtt)
-# Deli Ádám --> foetelek.py, levesek.py, rendelések(együtt)
-# Károlyi Kevin --> menü.csv, desszertek.py, rendelések(együtt)
+# Kiss Bálint Simon --> etlap.csv, itallap.csv, menuk.py
+# Deli Ádám --> foetelek.py, levesek.py
+# Károlyi Kevin --> menu.py, desszertek.py, file.py
+# közösen --> rendelesek.py
+# 

@@ -15,17 +15,17 @@ valasztas = input('Kérem válasszon az alábbi lehetőségek közül: \n\tHelyb
 if valasztas == 'helybenfogyasztás'.upper():
     v = input('Kérem válasszon az alábbiak közül: \n\t Étlap \n\t Itallap \n Az ön választása: ').upper()
     if v == 'Étlap'.upper():  
-        f = open('étlap.csv','r', encoding='utf-8')
-        for row in f:
-            splitted = row.split(';')
-        print(splitted)
-        f.close()
+        print('Az étlap:')
+        etlap()
     if v == 'itallap'.upper():
-        f = open('itallap.csv','r', encoding='utf-8')
-        for row in f:
-            splitted = row.split(';')
-        print(splitted)
-        f.close()
+        print('Az itallap:')
+        itallap()
 elif valasztas == 'Elvitel'.upper():
-    pass
+    v = input('Kérem válasszon az alábbiak közül: \n\t Étlap \n\t Itallap \n Az ön választása: ').upper()
+    if v == 'Étlap'.upper():  
+        print('Az étlap:')
+        etlap()
+    if v == 'itallap'.upper():
+        print('Az itallap:')
+        itallap()   
 

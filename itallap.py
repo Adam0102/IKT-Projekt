@@ -3,4 +3,4 @@ def itallap():
     for row in f:
         splitted = row.split(';')
     print(splitted)
-    f.close()
+    f.close() 

@@ -10,7 +10,7 @@ def nameLogingIn(name):
 
 def nameRegister():
     file = open('adat.csv', 'a', encoding='utf-8')
-    input('Nincs regisztrálva, adja meg nevét: ')
+    newName = input('Nincs regisztrálva, adja meg nevét: ')
     file.write(f'\n{newName}')
     file.close()
 

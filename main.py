@@ -1,6 +1,6 @@
 
 from adat import *
-from kosar import *
+# from kosar import *
 from rendeles import *
 
 

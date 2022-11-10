@@ -1,31 +1,11 @@
-from file import *
-from itallap import *
-from desszertek import *
-from etlap import *
-from foetelek import *
+from adat import *
 from kosar import *
-from levesek import * 
-from menuk import * 
-from rendelesek import * 
+from rendeles import *
 
 
-name = input('Kérjük, adja meg nevét: ')
-print(f'Üdv, {name}! Köszöntjük a KKFood-ban!')
-valasztas = input('Kérem válasszon az alábbi lehetőségek közül: \n\tHelybenfogyasztás \n\tElvitel \nAz ön választása: ').upper()
-if valasztas == 'helybenfogyasztás'.upper():
-    v = input('Kérem válasszon az alábbiak közül: \n\t Étlap \n\t Itallap \n Az ön választása: ').upper()
-    if v == 'Étlap'.upper():  
-        print('Az étlap:')
-        etlap()
-    if v == 'itallap'.upper():
-        print('Az itallap:')
-        itallap()
-elif valasztas == 'Elvitel'.upper():
-    v = input('Kérem válasszon az alábbiak közül: \n\t Étlap \n\t Itallap \n Az ön választása: ').upper()
-    if v == 'Étlap'.upper():  
-        print('Az étlap:')
-        etlap()
-    if v == 'itallap'.upper():
-        print('Az itallap:')
-        itallap()   
-
+name = input('Üdv a KKFood-ban! Kérjük adja meg felhasználónevét: ')
+nameLogin = nameLogingIn(name)
+if nameLogin == False:
+    nameRegister()
+elif nameLogin == True:
+    menu()

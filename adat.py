@@ -8,13 +8,10 @@ def nameLogingIn(name):
         return True
     file.close()
 
-def nameRegister(name):
+def nameRegister():
     file = open('adat.csv', 'a', encoding='utf-8')
-    for row in file:
-        splitted = row.split(';')
-        if name not in splitted:
-            file.write(name)
-        return True
+    input('Nincs regisztrálva, adja meg nevét: ')
+    file.write(f'\n{newName}')
     file.close()
 
 def menu():

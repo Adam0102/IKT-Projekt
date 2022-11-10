@@ -13,8 +13,9 @@ def nameRegister(name):
     for row in file:
         splitted = row.split(';')
         if name not in splitted:
-            file.read(name)
-    return True
+            file.write(name)
+        return True
+    file.close()
 
 def menu():
     pass

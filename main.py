@@ -9,4 +9,4 @@ if nameLogingIn(name) == False:
     nameRegister()
 elif nameLogingIn(name) == True:
     menu()
-input('-------------------------------------------\nKérem válasszon az alábbi opciók közül!: \n\tElvitel \n\tHázhoz szállítás\n------------------------------------------- \t\n\nA választásom: ')
+input('-------------------------------------------\nKérem válasszon az alábbi opciók közül!: \n\tElvitel (Személyes átvétellel) \n\tHázhoz szállítás (Futár szolgálattal)\n------------------------------------------- \t\n\nA választásom: ')

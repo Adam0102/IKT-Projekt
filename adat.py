@@ -1,4 +1,4 @@
-from main import *
+
 def nameLogingIn(name):
     file = open('adat.csv','r',encoding='utf-8')
     for row in file:

@@ -1,12 +1,48 @@
 
 from adat import *
-# from kosar import *
-from rendeles import *
+# from kosar import * 
+from rendeles import * 
 
 
-name = input('Üdv a KKFood-ban! Kérjük adja meg felhasználónevét: ')
-if nameLogingIn(name) == False:
-    nameRegister()
-elif nameLogingIn(name) == True:
-    menu()
-input('-------------------------------------------\nKérem válasszon az alábbi opciók közül!: \n\tElvitel (Személyes átvétellel) \n\tHázhoz szállítás (Futár szolgálattal)\n------------------------------------------- \t\n\nA választásom: ')
+
+name = input('Kérjük, adja meg nevét: ')
+phoneNumber = input(' Kérjük adja meg telefonszámát is: ')
+print(f'Üdv, {name}! Köszöntjük a KKFood-ban!')
+valasztas = input('Kérem válasszon az alábbi lehetőségek közül: \n\t1 - Elmegyek érte \n\t2 - Házhoz kérem \nAz ön választása: ')
+if valasztas == 1:
+    v = input('Kérem válasszon az alábbiak közül: \n\t1 - Étlap \n\t2 - Itallap \n Az ön választása: ')
+    if v == 1:  
+        print('Az étlap:')
+        etlap()
+    if v == 2:
+        print('Az itallap:')
+        itallap()
+elif valasztas == 2:
+    v = input('Kérem válasszon az alábbiak közül: \n\t1 - Étlap \n\t2 - Itallap \n Az ön választása: ')
+    if v == 1:  
+        print('Az étlap:')
+        etlap()
+    if v == 2:
+        print('Az itallap:')
+        itallap()   
+
+print('Menü:')
+print('0- Folytatás')
+print('1 - Kosár')
+print('2 - Rendeléseim')
+print('x - Kilépés')
+a = ('Adja meg: ')
+if a == 'a':
+    v = input('Kérem válasszon az alábbiak közül: \n\t1 - Étlap \n\t2 - Itallap \n Az ön választása: ')
+    if v == 'a':  
+        print('Az étlap:')
+        etlap()
+    if v == 'a':
+        print('Az itallap:')
+        itallap()
+if b == 'a':
+    kosar()
+if c == 'a':
+    rendelesek()
+if d == 'a':
+    print('Köszönjük, hogy nálunk vásárolt!')

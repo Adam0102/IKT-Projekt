@@ -1,17 +1,20 @@
 
-def nameLogingIn(name):
+def logingIn(name,phoneNummber):
     file = open('adat.csv','r',encoding='utf-8')
     for row in file:
-        splitted = row.split(';')
-        if name not in splitted:
-            return False
-        return True
+        splittedData = row.split(';')
+        if splittedData[1] == name and splittedData[4] == phoneNummber:
+            pass
+        else:
+            print('Ön nem regisztrált felhasználó!')
+            pass 
     file.close()
 
-def nameRegister():
+def dataRegister(name, dataOfBirth, city, phoneNummber):
     file = open('adat.csv', 'a', encoding='utf-8')
-    newName = input('Nincs regisztrálva, adja meg nevét: ')
-    file.write(f'\n{newName}')
+    for row in file:
+        splittedData = row.split(';')
+
     file.close()
 
 def menu():

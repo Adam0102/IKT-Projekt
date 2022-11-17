@@ -1,23 +1,33 @@
+from Cart import Cart
 
-foods = []
-prices = []
-total = 0
+fullCart = []
 
-while True:
-    item = input("Írd be a termék nevét (írd be a 'kész' szót az összegzéshez): ")
-    if item.lower() == "kész":
-        break
-    else:
-        price = float(input(f"Írd be a termék árát {item}: "))
-        foods.append(item)
-        prices.append(price)
 
-print("------ Kosarad ------")
+def readCart():
+    file = open('kosarak.csv', 'r', encoding = 'utf-8')
+    
+    for row in file:
+        splittedData = row.strip().split(';')
+        c = Cart()
+        c.name = splittedData[0]
+        c.price = int(splittedData[1])
+        fullCart.append(c)        
+    file.close()
 
-for item in foods:
-    print(item, end=", ")
+def totalCart():
+    total = 0
+    for item in fullCart:
+        total += item.price
+    return total
 
-for price in prices:
-    total += price
+def printCart():
+    print("------ Kosarad ------")
+    for item in fullCart:    
+        print(f'{item.name} - {item.price} Ft')
+    print(f"\nÖsszesen: {totalCart()} Ft") 
 
-print(f"\nÖsszesen: {total}Ft")
+
+readCart()
+printCart()
+
+

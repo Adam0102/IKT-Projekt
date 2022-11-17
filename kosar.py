@@ -1,22 +1,23 @@
-from kosarak import kosarak
 
-print(f'Kosár tartalma:')
+foods = []
+prices = []
+total = 0
 
-f = open('kosar.csv','r', encoding='utf-8')
+while True:
+    item = input("Írd be a termék nevét (írd be a 'kész' szót az összegzéshez): ")
+    if item.lower() == "kész":
+        break
+    else:
+        price = float(input(f"Írd be a termék árát {item}: "))
+        foods.append(item)
+        prices.append(price)
 
-kosarak = []
+print("------ Kosarad ------")
 
-res1 = kosarak()
+for item in foods:
+    print(item, end=", ")
 
-res1.name = 'Mexikói cheddar sajtkrémleves sajtos pizzafedővel'
-res1.type = 'Levesek'
-res1.price = '1390'
+for price in prices:
+    total += price
 
-kosarak.append(res1)
-
-print(res1)
-print(res1.name)
-print(res1.type)
-print(res1.price)
-
-print(f'{res1.name}-{res1.type}-{res1.price}')
+print(f"\nÖsszesen: {total}Ft")

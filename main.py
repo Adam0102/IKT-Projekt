@@ -1,12 +1,16 @@
 
 from adat import *
 # from kosar import * 
-from rendeles import * 
+from rendeles import *
+from Drink_essen import * 
 
 
 
 name = input('Kérjük, adja meg nevét: ')
-phoneNumber = input(' Kérjük adja meg telefonszámát is: ')
+phoneNumber = int(input(' Kérjük adja meg telefonszámát is: '))
+dataOfBirth = int(input('Adja meg születési dátumát: '))
+city = input('Adja meg tartózkodási heylét: ')
+dataRegister(name, dataOfBirth, city, phoneNumber)
 print(f'Üdv, {name}! Köszöntjük a KKFood-ban!')
 valasztas = input('Kérem válasszon az alábbi lehetőségek közül: \n\t1 - Elmegyek érte \n\t2 - Házhoz kérem \nAz ön választása: ')
 if valasztas == 1:

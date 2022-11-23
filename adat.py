@@ -1,28 +1,28 @@
 
-def logingIn(name,phoneNummber):
+def logingIn(name, dataOfBirth, city, phoneNummber):
     file = open('adat.csv','r',encoding='utf-8')
     for row in file:
         splittedData = row.split(';')
         if splittedData[1] == name and splittedData[4] == phoneNummber:
-            pass
+            return True
         else:
             print('Ön nem regisztrált felhasználó!')
-            pass 
+            dataRegister(name, dataOfBirth, city, phoneNummber)
     file.close()
 
-def dataRegister(name, dataOfBirth, city, phoneNummber):
-    file = open('adat.csv', 'w', encoding='utf-8')
+def newIndex():
+    file = open('adat.csv', 'r', encoding='utf-8')
+    max = 0
+    file.readline()
     for row in file:
         splittedData = row.split(';')
-        splittedData[0] = int(splittedData[0]) + 1 
-        if splittedData[1] not in file:
-            name.write(file)
-        elif splittedData[2] not in file:
-            dataOfBirth.write(file)
-        elif splittedData[3] not in file:
-            city.write(file)
-        elif splittedData[4] not in file:
-            phoneNummber.write(file)
+        if int(splittedData[0]) > max:
+            max = int(splittedData[0])
+    return max+1
+
+def dataRegister(name, dataOfBirth, city, phoneNummber):
+    file = open('adat.csv', 'a', encoding='utf-8')
+    file.write(f'{newIndex()};{name};{dataOfBirth};{city};{phoneNummber}\n')
     print('Sikeresen felvettük adatait')
     file.close()
 

@@ -2,7 +2,7 @@
 from adat import *
 # from kosar import * 
 from rendeles import *
-from Drink_essen import * 
+from EatDrink import * 
 
 
 
@@ -29,6 +29,8 @@ elif valasztas == 2:
     if v == 2:
         print('Az itallap:')
         itallap()   
+
+
 
 print('Menü:')
 print('0- Folytatás')

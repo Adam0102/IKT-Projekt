@@ -2,7 +2,7 @@
 import adat
 import kosar
 import rendeles
-import Drink_essen
+import EatDrink
 
 
 name = input('Kérjük, adja meg nevét: ')
@@ -30,6 +30,8 @@ elif valasztas == '2':
     if v == '2':
         print('Az itallap:')
         # itallapok()   
+
+
 
 print('Menü:')
 print('0- Folytatás')

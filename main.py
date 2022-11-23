@@ -2,7 +2,7 @@
 import adat
 import kosar
 import rendeles
-import EatDrink
+# import EatDrink
 
 
 name = input('Kérjük, adja meg nevét: ')

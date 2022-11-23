@@ -81,12 +81,9 @@ def etlapok():
 
 
     if v == 6:
-        file = open('etlap.csv','r',encoding='utf-8')
-        for row in file:
-            splittedData = row.split(';')
-            if splittedData[3] == 'Menük':
-                print(splittedData[0] + splittedData[1] + f'{splittedData[2]},-Ft')
-        file.close()
+        menük = kategoriaEtelei('Menük')
+        for menü in menük:
+            print(menü.id + menü.nev + f'{menü.ar},-Ft') 
 
 
 def italtipusokBeolvas():

@@ -1,9 +1,8 @@
 from Etlap import Etlap
+from lists import etlap, itallap
 
-etlap = []
-itallap = []
 italtipusok = {}
-
+kategoria = ''
 def openFile():
     file = open('etlap.csv','r',encoding='utf-8')
     for row in file:
@@ -26,6 +25,7 @@ def openFile():
         e.tipus = splittedData[3]
         itallap.append(e)
     file.close()
+
 def kategoriaEtelei(kategoria):
     etelek = []
     for e in etlap:
@@ -43,7 +43,7 @@ def kategoriaItalai(kategoria):
 def kiiras():
     f = open('italtipusok.csv','r',encoding='utf-8')
     for row in f:
-        print(row[0] + row[1])
+        print(row[0] + ' - ' + row[1])
     f.close()
 
 
@@ -54,7 +54,7 @@ def etlapok():
     print('2 - Főételek')
     print('3 - Tészták')
     print('4 - Pizzák')
-    print('5- Desszertek')
+    print('5 - Desszertek')
     print('6 - Menük')
     v = int(input('Kérem adja meg: '))
     if v == 1:
@@ -84,7 +84,8 @@ def etlapok():
         menük = kategoriaEtelei('Menük')
         for menü in menük:
             print(menü.id + menü.nev + f'{menü.ar},-Ft') 
-
+    kategoria = input('Kérem adja meg a választott ételt: ')
+    return kategoria
 
 def italtipusokBeolvas():
     file = open('italtipusok.csv','r')
@@ -99,10 +100,8 @@ def itallapok():
     print('Válasszon az alábbiak közül:')
     kiiras()
 
+    valsztas = int(input('Kérem válasszon: '))
 
-    v = int(input('Kérem válasszon: '))
-
-    for id,tipus in italtipusok.items:
-        italok = kategoriaItalai(italtipusok[v])
-        for ital in italok:
-            print(ital.id + ital.nev + f'{ital.ar},-Ft')   
+    italok = kategoriaItalai(italtipusok[valsztas])
+    for ital in italok:
+        print(ital.id + ital.nev + f'{ital.ar},-Ft')   

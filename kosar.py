@@ -1,11 +1,15 @@
 from lists import etlap, itallap
+from EatDrink import keresesEtel, keresesItal
+
 drinksInCart = []
 foodsInCart = []
 
 def addCart(id):
-    f = open('kosarak.csv', 'a', encoding='utf-8')
-    f.write('\n', id)
-    f.close()  
+    if id[0] == '0':
+        foodsInCart.append(id)
+    else:
+        drinksInCart.append(id)
+    
 
 def removeCart(id):
     
@@ -43,15 +47,13 @@ def totalCart():
 def printCart():
     print("------ Kosarad ------")
     for id in foodsInCart:
-        print(f'{etlap[id].id} - {etlap[id].nev} - {etlap[id].ar} Ft')
+        etel = keresesEtel(id)
+        print(f'{id} - {etel.nev} - {etel.ar} Ft')
 
     for id in drinksInCart:    
-        print(f'{etlap[id].id} - {itallap[id].nev} - {itallap[id].ar} Ft')
+        ital = keresesItal(id)
+        print(f'{id} - {ital.nev} - {ital.ar} Ft')
     
     print(f"\nÖsszesen: {totalCart()} Ft") 
-
-
-readCart()
-printCart()
 
 

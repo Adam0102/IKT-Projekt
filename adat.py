@@ -46,7 +46,7 @@ def menu():
             if v == '1':  
                 print('Az étlap:')
                 EatDrink.etlapok()
-            if v == 'a':
+            if v == '2':
                 print('Az itallap:')
                 EatDrink.itallapok()
         elif menuChoice == '1':
@@ -63,6 +63,7 @@ def menu():
                     print(lists.itallap())
                     id = int(input('Mit szeretne hozzáadni?'))
                     kosar.addCart(id)
+            break
         elif menuChoice == '2':
             rendeles.rendelesek()
     print('Köszönjük, hogy nálunk vásárolt!')   

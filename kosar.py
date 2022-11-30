@@ -1,11 +1,11 @@
 from lists import etlap, itallap
-from EatDrink import keresesEtel, keresesItal
+import EatDrink
 
 drinksInCart = []
 foodsInCart = []
 
 def addCart(id):
-    if id[0] == '0':
+    if id == '0':
         foodsInCart.append(id)
     else:
         drinksInCart.append(id)
@@ -44,16 +44,29 @@ def totalCart():
         total += itallap[id].ar
     return total
 
+def keresesEtel(id):
+    for etel in etlap:
+        if etel.id == id:
+            return etel
+    return False
+
+def keresesItal(id):
+    for ital in itallap:
+        if ital.id == id:
+            return ital
+    return False
+
 def printCart():
     print("------ Kosarad ------")
-    for id in foodsInCart:
-        etel = keresesEtel(id)
-        print(f'{id} - {etel.nev} - {etel.ar} Ft')
+    print(EatDrink.etlapok)
+    # for id in foodsInCart:
+    #     etel = keresesEtel(id)
+    #     print(f'{id} - {etel.nev} - {etel.ar} Ft')
 
-    for id in drinksInCart:    
-        ital = keresesItal(id)
-        print(f'{id} - {ital.nev} - {ital.ar} Ft')
-    
-    print(f"\nÖsszesen: {totalCart()} Ft") 
+    # for id in drinksInCart:    
+    #     ital = keresesItal(id)
+    #     print(f'{id} - {ital.nev} - {ital.ar} Ft')
+    # print(f"\nÖsszesen: {totalCart()} Ft") 
+    print('Köszönjük, hogy nálunk vásárolt!')
 
 

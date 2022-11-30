@@ -1,4 +1,9 @@
 
+import EatDrink
+import kosar
+import rendeles
+import lists
+
 def logingIn(name, dataOfBirth, city, phoneNummber):
     file = open('adat.csv','r',encoding='utf-8')
     regisztralt = False
@@ -30,7 +35,7 @@ def dataRegister(name, dataOfBirth, city, phoneNummber):
 
 def menu():
     print('Menü:')
-    print('0- Folytatás')
+    print('0 - Folytatás')
     print('1 - Kosár')
     print('2 - Rendeléseim')
     print('x - Kilépés')
@@ -40,12 +45,42 @@ def menu():
             v = input('Kérem válasszon az alábbiak közül: \n\t1 - Étlap \n\t2 - Itallap \n Az ön választása: ')
             if v == '1':  
                 print('Az étlap:')
-                # etlapok()
+                EatDrink.etlapok()
             if v == 'a':
                 print('Az itallap:')
-                # itallapok()
+                EatDrink.itallapok()
         elif menuChoice == '1':
-            pass # kosar()
+            kosar.printCart()
+            choice = input('Szeretné változtatni a kosár tartalmát? igen/nem').upper()
+            if choice == 'IGEN':
+                delete_Add = input('Törölni szeretne valamit?(1 - igen, 2 - nem').upper()
+                if delete_Add == '1' or delete_Add =='IGEN':
+                    torlendo = int(input('Hányadik ételt akarja törölni?'))
+                    id = torlendo - 1
+                    kosar.removeCart(id)
+                elif delete_Add == '2' or delete_Add == 'NEM':
+                    print(lists.etlap())
+                    print(lists.itallap())
+                    id = int(input('Mit szeretne hozzáadni?'))
+                    kosar.addCart(id)
         elif menuChoice == '2':
-            pass # rendelesek()
+            rendeles.rendelesek()
     print('Köszönjük, hogy nálunk vásárolt!')   
+
+def valasztas(valasztas):
+    if valasztas == '1':
+        v = input('Kérem válasszon az alábbiak közül: \n\t\t1 - Étlap \n\t\t2 - Itallap \nAz ön választása: ')
+        if v == '1':  
+            print('Az étlap:')
+            EatDrink.etlapok()
+        if v == '2':
+            print('Az itallap:')
+            EatDrink.itallapok()
+    elif valasztas == '2':
+        v = input('Kérem válasszon az alábbiak közül: \n\t\t1 - Étlap \n\t\t2 - Itallap \nAz ön választása: ')
+        if v == '1':  
+            print('Az étlap:')
+            EatDrink.etlapok()
+        if v == '2':
+            print('Az itallap:')
+            EatDrink.itallapok()   

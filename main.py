@@ -1,9 +1,6 @@
 
 import adat
 import EatDrink
-import kosar
-import rendeles
-
 
 name = input('Kérjük, adja meg nevét: ')
 phoneNumber = input('Kérjük adja meg telefonszámát is: ')

@@ -43,10 +43,10 @@ def totalCart():
 def printCart():
     print("------ Kosarad ------")
     for id in foodsInCart:
-        print(f'{etlap[id].nev} - {etlap[id].ar} Ft')
+        print(f'{etlap[id].id} - {etlap[id].nev} - {etlap[id].ar} Ft')
 
     for id in drinksInCart:    
-        print(f'{itallap[id].nev} - {itallap[id].ar} Ft')
+        print(f'{etlap[id].id} - {itallap[id].nev} - {itallap[id].ar} Ft')
     
     print(f"\nÖsszesen: {totalCart()} Ft") 
 

@@ -1,30 +1,11 @@
-from Etlap import Etlap
+from Etlap import Etlap, Itallap
 from lists import etlap, itallap
+from kosar import addCart
 
 italtipusok = {}
 kategoria = ''
-def openFile():
-    file = open('etlap.csv','r',encoding='utf-8')
-    for row in file:
-        splittedData = row.strip().split(';')
-        e = Etlap()
-        e.id = int(splittedData[0])
-        e.nev = splittedData[1]
-        e.ar = int(splittedData[2])
-        e.tipus = splittedData[3]
-        etlap.append(e)
-    file.close()
-def openFile():
-    file = open('itallap.csv','r',encoding='utf-8')
-    for row in file:
-        splittedData = row.strip().split(';')
-        e = Etlap()
-        e.id = int(splittedData[0])
-        e.nev = splittedData[1]
-        e.ar = int(splittedData[2])
-        e.tipus = splittedData[3]
-        itallap.append(e)
-    file.close()
+
+
 
 def kategoriaEtelei(kategoria):
     etelek = []
@@ -46,7 +27,17 @@ def kiiras():
         print(row[0] + ' - ' + row[1])
     f.close()
 
+def keresesEtel(id):
+    for etel in etlap:
+        if etel.id == id:
+            return etel
+    return False
 
+def keresesItal(id):
+    for ital in itallap:
+        if ital.id == id:
+            return ital
+    return False
     
 def etlapok():
     print('Válasszon az alábbiak közül:')
@@ -60,27 +51,39 @@ def etlapok():
     if v == 1:
         levesek = kategoriaEtelei('Levesek')
         for leves in levesek:
-            print(leves.id + leves.nev + f'{leves.ar},-Ft')    
+            print(f' {leves.id} {leves.nev} {leves.ar},-Ft')
+        id = input('Válasszon az ételek közül: ')
+        addCart(id)
     if v == 2:
         foetelek = kategoriaEtelei('Főételek')
         for foetel in foetelek:
-            print(foetel.id + foetel.nev + f'{foetel.ar},-Ft')       
+            print(f'{foetel.id} {foetel.nev} {foetel.ar},-Ft')
+            id = int(input('Válasszon az ételek közül: '))
+            addCart(id)       
     if v == 3:
         tesztak = kategoriaEtelei('Tészták')
         for teszta in tesztak:
-            print(teszta.id + teszta.nev + f'{teszta.ar},-Ft') 
+            print(f'{teszta.id} {teszta.nev} {teszta.ar},-Ft')
+            id = int(input('Válasszon az ételek közül: '))
+            addCart(id)
     if v == 4:
         pizzak = kategoriaEtelei('Pizzák')
         for pizza in pizzak:
-            print(pizza.id + pizza.nev + f'{pizza.ar},-Ft') 
+            print(f'{pizza.id} {pizza.nev} {pizza.ar},-Ft')
+            id = int(input('Válasszon az ételek közül: '))
+            addCart(id) 
     if v == 5:
         desszertek = kategoriaEtelei('Desszertek')
         for desszert in desszertek:
-            print(desszert.id + desszert.nev + f'{desszert.ar},-Ft') 
+            print(f'{desszert.id} {desszert.nev} {desszert.ar},-Ft')
+            id = int(input('Válasszon az ételek közül: '))
+            addCart(id) 
     if v == 6:
         menük = kategoriaEtelei('Menük')
         for menü in menük:
-            print(menü.id + menü.nev + f'{menü.ar},-Ft') 
+            print(f'{menü.id} {menü.nev} {menü.ar},-Ft')
+            id = int(input('Válasszon az ételek közül: '))
+            addCart(id)
 
 
 def italtipusokBeolvas():
@@ -100,4 +103,6 @@ def itallapok():
 
     italok = kategoriaItalai(italtipusok[valsztas])
     for ital in italok:
-        print(ital.id + ital.nev + f'{ital.ar},-Ft')   
+        print(f'{ital.id} {ital.nev} {ital.ar},-Ft') 
+        id = int(input('Válasszon az ételek közül: '))
+        addCart(id) 

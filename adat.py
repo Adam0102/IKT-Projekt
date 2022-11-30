@@ -35,7 +35,7 @@ def dataRegister(name, dataOfBirth, city, phoneNummber):
 
 def menu():
     print('Menü:')
-    print('0- Folytatás')
+    print('0 - Folytatás')
     print('1 - Kosár')
     print('2 - Rendeléseim')
     print('x - Kilépés')
@@ -66,3 +66,21 @@ def menu():
         elif menuChoice == '2':
             rendeles.rendelesek()
     print('Köszönjük, hogy nálunk vásárolt!')   
+
+def valasztas(valasztas):
+    if valasztas == '1':
+        v = input('Kérem válasszon az alábbiak közül: \n\t\t1 - Étlap \n\t\t2 - Itallap \nAz ön választása: ')
+        if v == '1':  
+            print('Az étlap:')
+            EatDrink.etlapok()
+        if v == '2':
+            print('Az itallap:')
+            EatDrink.itallapok()
+    elif valasztas == '2':
+        v = input('Kérem válasszon az alábbiak közül: \n\t\t1 - Étlap \n\t\t2 - Itallap \nAz ön választása: ')
+        if v == '1':  
+            print('Az étlap:')
+            EatDrink.etlapok()
+        if v == '2':
+            print('Az itallap:')
+            EatDrink.itallapok()   

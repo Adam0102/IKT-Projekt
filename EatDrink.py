@@ -73,19 +73,15 @@ def etlapok():
         pizzak = kategoriaEtelei('Pizzák')
         for pizza in pizzak:
             print(pizza.id + pizza.nev + f'{pizza.ar},-Ft') 
-
     if v == 5:
         desszertek = kategoriaEtelei('Desszertek')
         for desszert in desszertek:
             print(desszert.id + desszert.nev + f'{desszert.ar},-Ft') 
-
-
     if v == 6:
         menük = kategoriaEtelei('Menük')
         for menü in menük:
             print(menü.id + menü.nev + f'{menü.ar},-Ft') 
-    kategoria = input('Kérem adja meg a választott ételt: ')
-    return kategoria
+
 
 def italtipusokBeolvas():
     file = open('italtipusok.csv','r')

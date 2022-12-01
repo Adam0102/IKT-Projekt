@@ -1,27 +1,27 @@
-1;Szóda Karaf;1l;1 000;ásványvízek
-2;Szóda Karaf;0,5l;500;ásványvízek
-3;Naturaqua szénsavmentes;0,33l;590;ásványvízek
-4;Naturaqua szénsavmentes;0,75l;1 190;áványvízek
-5;Naturaqua szénsavas;0,75l;1 190;áványvízek
-6;Coca-Cola;0,25l;590;szénsavas üdítők
-7;Coca-Cola Zero;0,25l;590;szénsavas üdítők
-8;Fanta narancs;0,25l;590;szénsavas üdítők
-9;Almdudler;0,25l;790;szénsavas üdítők
-10;Cappy narancslé;1dl;300;gyümölcslevek, rostos üdítők
-11;Cappy almalé;1dl;300;gyümölcslevek, rostos üdítők
-12;Cappy őszibaracklé;1dl;300;gyümölcslevek, rostos üdítők
-13;Cappy eperlé;1dl;300;gyümölcslevek, rostos üdítők
-14;Cappy multivitamin;1dl;300;gyümölcslevek, rostos üdítők
-15;Bodzás limonádé;5dl;1 390;házi limonádék
-16;Áfonyás limonádé;5dl;1 390;házi limonádék
-17;Levendulás limonádé;5dl;1 390;házi limonádék
-18;Mangós limonádé;5dl;1 390;házi limonádék
-19;Maracujás limonádé;5dl;1 390;házi limonádék
-20;Epres limonádé;5dl;1 390;házi limonádék
-21;Radler;0,5l;720;csapolt sörök
-22;Heineken;0,5l;1 190;csapolt sörök
-23;Edelweiss búzasör;0,5l;1 290;csapolt sörök
-24;Eristoff Red;4cl;1 400;rövid italok
-25;Jack Daniel's;4cl;1 800;rövid italok
-26;Tiscaz Tequila Gold;4cl;1 400;rövid italok
-27;Limonchello;4cl;1 400;rövid italok
+1;Szóda Karaf;1;1 000;ásványvízek
+2;Szóda Karaf;0.5;500;ásványvízek
+3;Naturaqua szénsavmentes;0.33;590;ásványvízek
+4;Naturaqua szénsavmentes;0.75;1 190;áványvízek
+5;Naturaqua szénsavas;0.75;1 190;áványvízek
+6;Coca-Cola;0.25;590;szénsavas üdítők
+7;Coca-Cola Zero;0.25;590;szénsavas üdítők
+8;Fanta narancs;0.;590;szénsavas üdítők
+9;Almdudler;0.25;790;szénsavas üdítők
+10;Cappy narancslé;0.1;300;gyümölcslevek, rostos üdítők
+11;Cappy almalé;0.1;300;gyümölcslevek, rostos üdítők
+12;Cappy őszibaracklé;0.1;300;gyümölcslevek, rostos üdítők
+13;Cappy eperlé;0.1;300;gyümölcslevek, rostos üdítők
+14;Cappy multivitamin;0.1;300;gyümölcslevek, rostos üdítők
+15;Bodzás limonádé;0.5;1 390;házi limonádék
+16;Áfonyás limonádé;0.5;1 390;házi limonádék
+17;Levendulás limonádé;0.5;1 390;házi limonádék
+18;Mangós limonádé;0.5;1 390;házi limonádék
+19;Maracujás limonádé;0.5;1 390;házi limonádék
+20;Epres limonádé;0.5;1 390;házi limonádék
+21;Radler;0.5;720;csapolt sörök
+22;Heineken;0.5;1 190;csapolt sörök
+23;Edelweiss búzasör;0.5;1 290;csapolt sörök
+24;Eristoff Red;0.04;1 400;rövid italok
+25;Jack Daniel's;4;1 800;rövid italok
+26;Tiscaz Tequila Gold;4;1 400;rövid italok
+27;Limonchello;0.04;1 400;rövid italok
